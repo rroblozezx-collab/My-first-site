@@ -1,0 +1,138 @@
+/* Базові стилі для скидання */
+* {
+    box-sizing: border-box; /* Важливий прийом для легшого розрахунку ширини */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Стилі для посилань (без підкреслення) */
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Щоб посилання займало всю площу li */
+    padding: 10px 15px; /* Додамо внутрішній відступ для клікабельності */
+    text-align: center;
+}
+
+/* 2. Оголошення класу "container" (контейнер Flexbox) */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    border: 1px dashed white;
+    background-color:
+    #ff5599;
+}
+
+
+/* 3. Стилі для елементів списку li (Flex-елементи) */
+
+.container li{
+    flex-grow: 1;
+    margin-top: 5px; margin-bottom: 2px;
+    margin-right: 8px;
+    background-color: #ff5555;
+    list-style-type: none;
+    font-size:50px;
+}
+
+.img {
+    width: 200px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.img-container li{
+    display: inline-block;
+    width: 32%;
+    padding: 10px;
+}
+
+.img-container {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.img-container img {
+    width: 80%;
+    display: inline-block;
+    transition: .25s;
+}
+
+.img-container ul li {
+    list-style-type: none;
+}
+
+
+.inline-img {
+    display: inline-block;
+    border-radius: 15px;
+    text-align: center;
+
+    gap: 10px;     /* відступи між картинками */
+    justify-content: center; /* вирівнювання по центру */
+}
+
+.inline-img img {
+    width: 20%;   /* або будь-яка потрібна ширина */
+    border-radius: 15px;
+    transform: scale(0.95);
+    transition: .3s;
+    max-width: 35%;
+}
+
+.inline-img img:hover{
+    transform: scale(1.2);
+}
+
+.square {
+    width: 90px;
+    height: 90px;
+    margin: 30px auto;
+    background-color: #123456;
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    25% {background-color: yellow;}
+    100% {transform: rotate(360deg);}
+}
+
+.multimedia {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.multimedia-video {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    padding: 15px 0;
+    float: right;
+}
